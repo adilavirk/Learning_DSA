@@ -1,0 +1,26 @@
+.container {
+  height: 100vh;
+  width: 80vw;
+  border: 2px solid red;
+  display: grid;
+  /* grid-template-columns: 150px 250px; */
+  grid-template-columns: [pehla]100px [dosra]150px [teesra];
+  grid-template-rows: repeat(3, minmax(100px, 150px));
+  grid-gap: 10px 10px;
+  place-content: center;
+}
+.item {
+  border: 2px solid black;
+  background-color: rgb(255, 0, 170);
+  margin: 10px;
+  padding: 10px;
+}
+.item:nth-child(1) {
+  grid-column: pehla/teesra;
+
+  /* grid-column-start: pehla;
+  grid-column-end: doosra; */
+}
+/* .item:nth-child(3){
+    align-self: center;
+} */

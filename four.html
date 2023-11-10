@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Search element in array</h2>
+    <script>
+      let arr = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+      let value = 70;
+      let index = undefined;
+      for (let i = 0; i < arr.length - 1; i++) {
+        if (arr[i] == value) {
+          index = i;
+          break;
+        }
+      }
+      //   console.log(index);
+      console.log(arr[index]);
+
+      //using javascript default function
+      console.log(arr.indexOf(value));
+    </script>
+  </body>
+</html>

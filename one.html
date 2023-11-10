@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Traversing</title>
+  </head>
+  <body>
+    <h1>
+      Array Traversing and Fetching particular value from Array including
+      Validation
+    </h1>
+    <input type="text" id="Inputelement" />
+    <button onclick="getElement()">Print value</button>
+    <script>
+      let arr = [12, 32, 34, 23, 56, 88, 0, 11];
+      //  1. Traversing Array
+      for (let i = 0; i < arr.length; i++) {
+        // document.write(`value of index ${i} is ${arr[i]} <br>`);
+      }
+
+      //   2. fetching particular index value from array and printing it
+
+      let index = 3;
+      //   document.write(`value of index given by user is ${arr[index]}<br>`);
+
+      //3. printing array value on the click of button
+      function getElement() {
+        let elem = document.getElementById("Inputelement").value;
+        if (
+          elem &&
+          elem < arr.length &&
+          typeof parseInt(elem) === "number" &&
+          elem >= 0
+        ) {
+          alert(`Value of index ${elem} is ${arr[elem]}`);
+        } else {
+          alert("enter valid number!!");
+        }
+      }
+    </script>
+  </body>
+</html>

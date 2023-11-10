@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doubly Linked List</title>
+  </head>
+  <body>
+    <h2>Doubly Linked List</h2>
+    <script>
+      class Node {
+        constructor(prev, item, next) {
+          this.head = {
+            item: item,
+            prev: null,
+            next: next,
+          };
+        }
+        insert_at_start(data) {
+          this.prev = null;
+          this.item = data;
+          this.next = this.head;
+          let newNode;
+          this.head.prev = newNode;
+          this.head = newNode;
+        }
+      }
+
+      class DDL {
+        constructor(head) {
+          this.head = head;
+        }
+        isEmpty() {
+          //   return this.head == null;
+          if (this.head == null) {
+            console.log("List is empty!!!");
+          } else {
+            console.log("list is not empty!!!!!");
+          }
+        }
+
+        insert_at_start(data) {
+          this.item = data;
+          this.prev = null;
+          this.next = this.head;
+          let newNode = this.head.prev;
+          this.head = newNode;
+        }
+      }
+      let list = new Node(null, 2500, 100);
+      list.insert_at_start(100, 4000, 600);
+      //   list.isEmpty();
+      console.log(list);
+      //   list.insert_at_start(null, 2500, 100);
+    </script>
+  </body>
+</html>

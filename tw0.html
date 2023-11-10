@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Insert Element in Array JS</h2>
+
+    <script>
+      let data = [12, 32, 54, 76, 11];
+      let newElement = 0;
+      let position = 3;
+
+      //reverse loop
+
+      for (let i = data.length - 1; i >= 0; i--) {
+        console.log(data[i]);
+        //shift values to next position until given "position" reached.
+        if (i >= position) {
+          data[i + 1] = data[i];
+        }
+        if (i == position) {
+          data[i] = newElement;
+        }
+      }
+      console.log(data);
+
+      //using JavaScript splice method (by default function that implements same above logic)
+
+      let arr = [12, 13, 14, 15];
+      arr.splice(2, 0, 1000);
+      console.log(arr);
+    </script>
+  </body>
+</html>
